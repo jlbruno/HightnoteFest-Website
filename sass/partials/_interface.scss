@@ -1,0 +1,50 @@
+﻿
+
+::-moz-selection {
+	background:#1988CC;
+	color:#FFFFFF;
+}
+
+::selection {
+	background:#1988CC;
+	color:#FFFFFF;
+}
+
+
+img {
+	max-width: 100%;
+}
+
+
+body {
+	color: $primary-text-color;
+	font-family: $primary-font;
+	font-size: 14px;
+	line-height: 1.5;
+	margin: 0 auto;
+	max-width: 1160px;
+	padding: 0;
+}
+
+
+section {
+	@extend %clearfix;
+	border-top: 1px solid gray;
+	margin: 2em 0 0 0;
+}
+
+
+footer {
+	border-top: 1px solid gray;
+	margin: 2em 0 0 0;
+	padding: 1em 0;
+}
+
+
+.col {
+
+	@include respond-to('gt-small') {
+		float: left;
+		width: 50%;
+	}
+}
