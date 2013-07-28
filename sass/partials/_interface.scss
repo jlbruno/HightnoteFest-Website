@@ -15,24 +15,74 @@ img {
 	max-width: 100%;
 }
 
-
 body {
-	color: $primary-text-color;
+	color: $color-primary;
 	font-family: $primary-font;
 	font-size: 14px;
 	line-height: 1.5;
-	margin: 0 auto;
-	max-width: 1160px;
 	padding: 0;
 }
 
-
-section {
-	@extend %clearfix;
-	border-top: 1px solid gray;
-	margin: 2em 0 0 0;
+.stage {
+	margin: 0 auto;
+	max-width: 1160px;
+	padding: 0 20px;
+	position: relative;
 }
 
+header {
+}
+
+#logo {
+	margin: 30px 0 0 0;
+}
+.what {
+	color: $color-tertiary;
+	font-size: 24px;
+	line-height: 1.2;
+}
+.photos {
+	position: absolute;
+		top: 0;
+		right: 30px;
+}
+
+section {
+
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+
+	@extend %clearfix;
+	margin: 2em 0 0 0;
+	overflow: hidden;
+	position: relative;
+
+	h1 {
+		background: yellow;
+	}
+
+	.stage {
+		.col {
+			background-color: rgba(255,255,255,.4);
+		}
+	}
+}
+
+
+.section-bg {
+	min-height: 100%;
+	min-width: 800px;
+	opacity: .3;
+	position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	width: 100%;
+	z-index: -1;
+}
 
 footer {
 	border-top: 1px solid gray;
@@ -42,9 +92,21 @@ footer {
 
 
 .col {
+	@include box-sizing('border-box');
 
 	@include respond-to('gt-small') {
 		float: left;
+		padding: 0 2em;
 		width: 50%;
 	}
+}
+
+
+
+#music-activities {
+	background-image: url(../img/photos_47a.jpg);
+}
+
+#foundation {
+	background-image: url(../img/photos_42a.jpg);
 }

@@ -4,7 +4,7 @@
 a,
 a:link,
 a:active {
-	color: $primary-accent-color;
+	color: $color-secondary;
 	text-decoration: none;
 
 	&:hover {
@@ -13,14 +13,24 @@ a:active {
 }
 
 
+p {
+	margin-top: 0;
+}
+
 /* ===================================================================== HEADERS */
 
 .page-header {
 	font-size: 22px;
 }
 
-.section-header {
+.hdr-section {
+	@include text-shadow(2px 2px 2px rgba(0, 0, 0, .5));
+	color: $color-secondary;
+	font-size: 24px;
+}
+.hdr-subsection {
 	font-size: 18px;
+	margin-top: 0;
 }
 
 
@@ -30,9 +40,11 @@ a:active {
 
 .button {
 	@include border-radius($default-border-radius);
-	background-color: $primary-button-color;
-	color: $tertiary-text-color;
-	padding: 5px 20px;
+	background-color: $color-secondary;
+	color: $color-primary;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 15px 30px;
 
 	&:hover {
 		text-decoration: none;
@@ -56,3 +68,22 @@ a:active {
 	}
 }
 
+
+
+/* ===================================================================== PHOTOS */
+
+
+.photo-thumb {
+	border: none;
+	display: inline-block;
+	position: relative;
+
+	&:nth-child(even) {
+		@include rotate(2deg);
+		top: -4px;
+	}
+	&:nth-child(odd) {
+		@include rotate(-2deg);
+		top: 4px;
+	}
+}
