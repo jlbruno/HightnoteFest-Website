@@ -15,6 +15,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 	
 	<link rel="stylesheet" href="css/screen.css" media="screen" />
+	<link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css" media="screen" />
 	<link rel="stylesheet" href="css/print.css" media="print" />
 
 	<script src="js/libs/modernizr.custom.96609.js"></script>
@@ -43,17 +44,17 @@
 			</div>
 
 			<div class="photos">
-				<a href="photos/photos_05a.jpg" class="photo-thumb">
+				<a href="photos/photos_05a.jpg" class="photo-thumb" rel="gallery1">
 					<img src="photos/05a.jpg" alt="" /></a>
-				<a href="photos/photos_28a.jpg" class="photo-thumb">
+				<a href="photos/photos_28a.jpg" class="photo-thumb" rel="gallery1">
 					<img src="photos/28a.jpg" alt="" /></a>
-				<a href="photos/photos_37a.jpg" class="photo-thumb">
+				<a href="photos/photos_37a.jpg" class="photo-thumb" rel="gallery1">
 					<img src="photos/37a.jpg" alt="" /></a>
-				<a href="photos/photos_42a.jpg" class="photo-thumb">
+				<a href="photos/photos_42a.jpg" class="photo-thumb" rel="gallery1">
 					<img src="photos/42a.jpg" alt="" /></a>
-				<a href="photos/photos_50a.jpg" class="photo-thumb">
+				<a href="photos/photos_50a.jpg" class="photo-thumb" rel="gallery1">
 					<img src="photos/50a.jpg" alt="" /></a>
-				<a href="photos/photos_75a.jpg" class="photo-thumb">
+				<a href="photos/photos_75a.jpg" class="photo-thumb" rel="gallery1">
 					<img src="photos/75a.jpg" alt="" /></a>
 			</div>
 			
@@ -105,7 +106,7 @@
 
 			<section id="music-activities">
 
-				<div class="stage">
+				<div class="stage photo-bg">
 					<h2 class="hdr-section">Music and Activies</h2>
 
 					<div class="col">
@@ -181,7 +182,7 @@
 
 			
 			<section id="foundation">
-				<div class="stage">
+				<div class="stage photo-bg">
 					<h2 class="hdr-section">The Adam McPhee Memorial Foundation</h2>
 
 					<div class="col">
@@ -189,7 +190,7 @@
 					</div>
 
 					<div class="col">
-						<h3 id="proceeds">Benefit Proceeds</h3>
+						<h3 class="hdr-subsection">Benefit Proceeds</h3>
 
 						<ul>
 							<li>Richie McFarland Children’s Center</li>
@@ -236,7 +237,12 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.1.min.js">\x3C/script>')</script>
 
+	<script type="text/javascript" src="libs/fancybox/jquery.fancybox.js"></script>
 	<script type="text/javascript" src="js/common.js"></script>
+
+	<script>
+        $('.photo-thumb').fancybox();
+	</script>
 
 </body>
 </html>

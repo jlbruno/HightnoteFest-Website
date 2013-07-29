@@ -1,5 +1,6 @@
 
 $break-mid: 600px;
+$break-biggie: 1085px;
 
 @mixin respond-to($media) {
 	@if $media == small {
@@ -7,6 +8,9 @@ $break-mid: 600px;
 	}
 	@else if $media == gt-small {
 		@media only screen and (min-width: $break-mid + 1) { @content; }
+	}
+	@else if $media == gt-biggie {
+		@media only screen and (min-width: $break-biggie + 1) { @content; }
 	}
 }
 

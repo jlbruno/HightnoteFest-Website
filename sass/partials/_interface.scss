@@ -24,6 +24,7 @@ body {
 }
 
 .stage {
+	@extend %clearfix;
 	margin: 0 auto;
 	max-width: 1160px;
 	padding: 0 20px;
@@ -42,9 +43,13 @@ header {
 	line-height: 1.2;
 }
 .photos {
-	position: absolute;
-		top: 0;
-		right: 30px;
+
+
+	@include respond-to('gt-biggie') {
+		position: absolute;
+			top: 15px;
+			right: 30px;
+	}
 }
 
 section {
@@ -54,7 +59,6 @@ section {
 	background-attachment: fixed;
 	background-size: cover;
 
-	@extend %clearfix;
 	margin: 2em 0 0 0;
 	overflow: hidden;
 	position: relative;
@@ -64,8 +68,8 @@ section {
 	}
 
 	.stage {
-		.col {
-			background-color: rgba(255,255,255,.4);
+		&.photo-bg {
+			background-color: rgba(255,255,255,.6);
 		}
 	}
 }

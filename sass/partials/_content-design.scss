@@ -4,8 +4,8 @@
 a,
 a:link,
 a:active {
-	color: $color-secondary;
-	text-decoration: none;
+	color: darken($color-secondary, 50%);
+	text-decoration: underline;
 
 	&:hover {
 		text-decoration: underline;
@@ -45,6 +45,10 @@ p {
 	font-size: 18px;
 	font-weight: bold;
 	padding: 15px 30px;
+
+	&:link {
+		text-decoration: none;
+	}
 
 	&:hover {
 		text-decoration: none;
