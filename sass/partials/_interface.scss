@@ -18,7 +18,7 @@ img {
 body {
 	color: $color-primary;
 	font-family: $primary-font;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 1.5;
 	padding: 0;
 }
@@ -43,11 +43,11 @@ header {
 	line-height: 1.2;
 }
 .photos {
-
+	margin: 0 0 1em 0;
 
 	@include respond-to('gt-biggie') {
 		position: absolute;
-			top: 15px;
+			top: 30px;
 			right: 30px;
 	}
 }
@@ -67,10 +67,12 @@ section {
 		background: yellow;
 	}
 
-	.stage {
-		&.photo-bg {
-			background-color: rgba(255,255,255,.6);
-		}
+	.photo-bg {
+		background-color: white;
+		background-color: rgba(255,255,255,.7);
+		color: #000;
+		height: 100%;
+		width: 100%;
 	}
 }
 
@@ -89,9 +91,9 @@ section {
 }
 
 footer {
-	border-top: 1px solid gray;
 	margin: 2em 0 0 0;
 	padding: 1em 0;
+	text-align: center;
 }
 
 
@@ -108,9 +110,13 @@ footer {
 
 
 #music-activities {
-	background-image: url(../img/photos_47a.jpg);
+	background-image: url(../photos/pumpkins.jpg);
+}
+
+#tickets-directions {
+	background-image: url(../photos/hayride.jpg);
 }
 
 #foundation {
-	background-image: url(../img/photos_42a.jpg);
+	background-image: url(../photos/balloons.jpg);
 }
