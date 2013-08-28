@@ -17,11 +17,15 @@
 			border-top: 1px solid $color-secondary;
 			border-bottom: 1px solid $color-primary;
 			float: left;
-			font-size: 16px;
+			font-size: 14px;
 			font-weight: bold;
 			height: 100%;
 			position: relative;
 			width: 100%;
+
+			@include respond-to('gt-biggie') {
+				font-size: 16px;
+			}
 
 
 			@include respond-to('gt-small') {
