@@ -99,7 +99,7 @@ footer {
 
 
 .col {
-	@include box-sizing('border-box');
+	box-sizing: border-box;
 
 	@include respond-to('gt-small') {
 		float: left;

@@ -28,9 +28,9 @@ p {
 }
 
 .hdr-section {
-	@include text-shadow(2px 2px 2px rgba(0, 0, 0, .5));
 	color: darken($color-secondary, 10%);
 	font-size: 32px;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
 }
 .hdr-subsection {
 	font-size: 18px;
@@ -43,8 +43,8 @@ p {
 /* ===================================================================== BUTTONS */
 
 .button {
-	@include border-radius($default-border-radius);
 	background-color: $color-secondary;
+	border-radius: $default-border-radius;
 	color: $color-primary;
 	font-size: 18px;
 	font-weight: bold;
@@ -87,11 +87,11 @@ p {
 	position: relative;
 
 	&:nth-child(even) {
-		@include rotate(2deg);
 		top: -4px;
+		transform: rotate(2deg);
 	}
 	&:nth-child(odd) {
-		@include rotate(-2deg);
 		top: 4px;
+		transform: rotate(-2deg);
 	}
 }

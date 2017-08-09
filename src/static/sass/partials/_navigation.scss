@@ -13,9 +13,9 @@
 		width: 100%;
 
 		li {
-			@include box-sizing('border-box');
 			border-top: 1px solid $color-secondary;
 			border-bottom: 1px solid $color-primary;
+			box-sizing: border-box;
 			display: inline-block;
 			font-size: 14px;
 			font-weight: bold;
@@ -38,17 +38,17 @@
 			}
 
 			a {
-				@include box-sizing(border-box);
-				@include text-shadow(1px 1px 7px $color-secondary);
-				@include transition-property(background-color);
-  				@include transition-duration(.2s);
 				background-color: darken($color-secondary, 22%);
+				box-sizing: border-box;
 				color: $color-primary;
 				display: block;
 				height: 100%;
 				padding: 22px 0;
 				text-align: center;
 				text-decoration: none;
+				text-shadow: 1px 1px 7px $color-secondary;
+				transition-duration: 0.2s;
+				transition-property: background-color;
 				width: 100%;
 
 
