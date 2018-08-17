@@ -49,7 +49,6 @@ gulp.task('gulpfile', getTask('script','gulpfile'));
 
 gulp.task('uglifyjs', getTask('script','uglifyjs'));
 
-gulp.task("babel", getTask('script','babel'));
 
 
 // Local dev server

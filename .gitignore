@@ -7,3 +7,5 @@ compass_app_log.txt
 css/
 fancyapps-fancyBox-v2.1.5-0-ge2248f4/
 node_modules/
+
+npm-debug\.log
