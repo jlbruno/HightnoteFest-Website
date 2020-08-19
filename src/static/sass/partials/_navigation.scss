@@ -3,25 +3,31 @@
 
 
 .nav-primary {
-	@extend %clearfix;
+	flex-basis: auto;
+	width: 100%;
 
 	ul {
-		@extend %clearfix;
+		display: block;
+		justify-items: baseline;
 		list-style: none;
 		margin: 1em 0 0 0;
 		padding: 0;
 		width: 100%;
 
+		
+		@include respond-to('gt-small') {
+			display: flex;
+		}
+
 		li {
 			border-top: 1px solid $color-secondary;
 			border-bottom: 1px solid $color-primary;
 			box-sizing: border-box;
-			display: inline-block;
+			flex: auto;
 			font-size: 14px;
 			font-weight: bold;
 			height: 100%;
 			position: relative;
-			width: 100%;
 			vertical-align: middle;
 
 			@include respond-to('gt-biggie') {
@@ -34,7 +40,6 @@
 				border-left: 1px solid $color-secondary;
 				border-bottom: none;
 				border-right: 1px solid $color-primary;
-				width: 33.3%;
 			}
 
 			a {

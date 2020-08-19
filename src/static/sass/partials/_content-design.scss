@@ -29,9 +29,17 @@ p {
 
 .hdr-section {
 	color: darken($color-secondary, 10%);
+	flex: 1;
+	flex-basis: auto;
 	font-size: 32px;
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+	width: 100%;
+
+	.stage & {
+		margin-top: calc(0.83em - 20px); /* 20px is the top padding on .stage */
+	}
 }
+
 .hdr-subsection {
 	font-size: 18px;
 	margin-top: 0;
@@ -93,5 +101,15 @@ p {
 	&:nth-child(odd) {
 		top: 4px;
 		transform: rotate(-2deg);
+	}
+}
+
+
+.branding {
+	display: flex;
+	justify-content: center;;
+
+	img {
+		max-height: 500px;
 	}
 }
