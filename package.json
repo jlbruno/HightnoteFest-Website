@@ -6,28 +6,18 @@
   },
   "scripts": {
     "prestart": "npm install",
-    "start": "gulp serve",
-    "build": "gulp"
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "legacy:start": "gulp serve",
+    "legacy:build": "gulp"
   },
   "devDependencies": {
-    "autoprefixer": "6.1.2",
-    "browser-sync": "2.10.0",
-    "gulp": "3.9.1",
-    "gulp-babel": "6.1.1",
-    "gulp-cssfmt": "1.0.0",
-    "gulp-header": "1.7.1",
-    "gulp-jshint": "2.0.0",
-    "gulp-load-plugins": "1.2.0",
-    "gulp-postcss": "6.0.1",
-    "gulp-sass": "2.1.0",
-    "gulp-sourcemaps": "1.6.0",
-    "gulp-uglify": "1.5.1",
-    "gulp-util": "3.0.7",
-    "jshint": "2.9.2",
-    "node-sass": "4.9.3"
+    "vite": "^5.2.9"
   },
   "dependencies": {
-    "natives": "^1.1.6"
+    "@fancyapps/ui": "^5.0.36"
   },
   "license": "UNLICENSED",
   "repository": {
