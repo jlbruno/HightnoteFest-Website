@@ -11,6 +11,9 @@ export default defineConfig({
       usePolling: true
     }
   },
+  css: {
+    devSourcemap: true
+  },
   build: {
     outDir: '../dist',
     emptyOutDir: true,

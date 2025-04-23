@@ -1,7 +1,7 @@
 /* CSS Variables */
 :root {
-  --primary-font: Verdana, Arial, sans-serif;
-  --secondary-font: Georgia, "Times New Roman", serif;
+  --primary-font: "Noto Sans", Verdana, Arial, sans-serif;
+  --secondary-font: "Cherry Bomb One", Verdana, sans-serif;
   --color-primary: #000;
   --color-secondary: #fffe2a; /* yellow */
   --color-tertiary: #43B2FF; /* blue */
@@ -13,6 +13,17 @@
 mid: 600px;
 large: 1085px;
 */
+
+
+
+.noto-sans-400 {
+	font-family: "Noto Sans", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-variation-settings:
+	  "wdth" 100;
+  }
 
 
 ::selection {
@@ -33,6 +44,12 @@ body {
 	line-height: 1.5;
     margin: 0;
 	padding: 0;
+
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-variation-settings:
+	  "wdth" 100;
 }
 
 #logo {
@@ -43,6 +60,7 @@ body {
 	flex-basis: auto;
 	font-size: 24px;
 	line-height: 1.2;
+	margin-block: .5em;
 	width: 100%;
 
     h1 {
@@ -78,7 +96,7 @@ section {
 	}
 }
 .bg-image {
-    background-color: rgba(255, 255, 255, 0.7); 
+    background-color: rgba(255, 255, 255, 0.8); 
     background-blend-mode: overlay;
     margin-block-start: 2em;
     padding-block-start: 3em;
@@ -100,7 +118,7 @@ section {
 	position: relative;
 
     
-    @media (min-width: 600px) {
+    @media (min-width: 700px) {
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
             "header header"
@@ -110,8 +128,9 @@ section {
     
     .col {
         box-sizing: border-box;
+		container-type: inline-size;
         
-        @media (min-width: 600px) {
+        @media (min-width: 700px) {
             flex: 1;
             padding: 0 2em;
         }
@@ -140,9 +159,40 @@ footer {
 	background-image: url(../photos/balloons.jpg);
 }
 
+.schedule {
+	margin-inline-start: 1em;
+
+	dt {
+		color: var(--color-tertiary);
+		filter: brightness(0.8);
+		font-weight: 500;
+	}
+	dd {
+		margin-block-end: .5em;
+	}
+
+	@container (min-width: 375px) {
+		display: grid;
+		gap: 1em;
+		grid-template-columns: auto 2fr;
+		grid-template-rows: auto;
+
+		dt {
+			font-weight: bold;
+			grid-column: 1;
+			text-align: right;
+		}
+		dt::after {
+			content: ":";
+		}
+		dd {
+			grid-column: 2;
+			margin-inline-start: 0;
+		}
+	}
+}
 
 .map {
-	max-width: 425px;
 	width: 100%;
 }
 
@@ -175,19 +225,25 @@ p {
 }
 
 .hdr-section {
-	color: var(--color-secondary);
+	color: var(--color-primary);
 	filter: brightness(0.9); /* darken by approximately 10% */
-	font-size: 32px;
+	font-family: var(--secondary-font);
+	font-size: 36px;
+	font-weight: 500;
     grid-area: header;
     line-height: 1.2;
     margin: 0 0 .5em 0;
-	text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+	text-shadow: 1px 1px 1px var(--color-secondary),
+		-1px -1px 1px var(--color-secondary);
 	width: 100%;
 }
 
 .hdr-subsection {
 	font-size: 18px;
-	margin-top: 0;
+	margin-block: 0 1em;
+}
+.hdr-subsection:not(:first-child) {
+	margin-block-start: 2em;
 }
 
 
