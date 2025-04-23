@@ -37,6 +37,8 @@ img {
 }
 
 body {
+	border-image: linear-gradient(to bottom,var(--color-primary) 0%, var(--color-primary) 20%, var(--color-secondary) 20%);
+	border-image-slice: 49%;
 	border-top: 10px solid var(--color-secondary);
 	color: var(--color-primary);
 	font-family: var(--primary-font);
@@ -254,19 +256,27 @@ p {
 .button {
 	background-color: var(--color-secondary);
 	border-radius: var(--default-border-radius);
+	box-shadow: 0 3px 4px rgba(0, 0, 0, 0.25);
 	color: var(--color-primary);
+	filter: brightness(0.78); /* darken by approximately 22% */
 	font-size: 18px;
 	font-weight: bold;
 	padding: 15px 30px;
+	transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+	display: inline-block; /* Ensure the element can be transformed */
 }
 
 .button:link {
 	text-decoration: none;
 }
 
-.button:hover {
+.button:hover,
+.button:active {
+	transform: translateY(1px);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 	text-decoration: none;
 }
+
 
 
 
