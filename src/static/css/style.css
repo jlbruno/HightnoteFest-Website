@@ -6,7 +6,7 @@
 	--color-secondary: #fffe2a; /* yellow */
 	--color-tertiary: #43b2ff; /* blue */
 	--default-border-radius: 5px 5px 5px 5px;
-	--fancybox-opacity: 0.97;
+	--lightbox-backdrop-opacity: 0.97;
 }
 
 /* breakpoints
@@ -280,8 +280,12 @@ p {
 /* ===================================================================== PHOTOS */
 
 .photo-thumb {
+	background: none;
 	border: none;
+	cursor: pointer;
 	display: inline-block;
+	font: inherit;
+	padding: 0;
 	position: relative;
 
 	&:nth-child(even) {
@@ -300,6 +304,50 @@ p {
 	img {
 		display: block;
 	}
+}
+
+.lightbox {
+	align-items: center;
+	background: transparent;
+	border: none;
+	gap: 1rem;
+	margin: auto;
+	max-height: 90vh;
+	max-width: 90vw;
+	padding: 0;
+
+	&:popover-open {
+		display: flex;
+	}
+
+	&::backdrop {
+		background: rgba(0, 0, 0, var(--lightbox-backdrop-opacity));
+	}
+}
+
+.lightbox-img {
+	display: block;
+	max-height: 85vh;
+	max-width: 80vw;
+	min-width: 0;
+	object-fit: contain;
+}
+
+.lightbox-close,
+.lightbox-next,
+.lightbox-prev {
+	background: none;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	flex-shrink: 0;
+	font-size: 2rem;
+}
+
+.lightbox-close {
+	position: absolute;
+	right: 1rem;
+	top: 0;
 }
 
 .branding {

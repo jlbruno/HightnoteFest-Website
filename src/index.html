@@ -14,8 +14,9 @@
 	
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 	
-	<link rel="preload" href="static/css/style.css?v=20260801" as="style" media="all" />
-	<link rel="stylesheet" href="static/libs/fancybox_5.0.36/fancybox.css" media="all" />
+	
+	<link rel="preload" href="static/css/style.css?v=20260801" as="style" />
+	<link rel="stylesheet" href="static/css/style.css?v=20260801" media="all" />
 	<link rel="stylesheet" href="static/css/print.css" media="print" />
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,18 +45,25 @@
 		</div>
 
 		<div class="photos">
-			<a href="static/photos/photos_05a.webp" class="photo-thumb" data-fancybox="gallery1">
-				<img src="static/photos/05a.webp" alt="" width="113" height="94" /></a>
-			<a href="static/photos/photos_28a.webp" class="photo-thumb" data-fancybox="gallery1">
-				<img src="static/photos/28a.webp" alt="" width="113" height="94" /></a>
-			<a href="static/photos/photos_37a.webp" class="photo-thumb" data-fancybox="gallery1">
-				<img src="static/photos/37a.webp" alt="" width="113" height="94" /></a>
-			<a href="static/photos/photos_42a.webp" class="photo-thumb" data-fancybox="gallery1">
-				<img src="static/photos/42a.webp" alt="" width="113" height="94" /></a>
-			<a href="static/photos/photos_50a.webp" class="photo-thumb" data-fancybox="gallery1">
-				<img src="static/photos/50a.webp" alt="" width="113" height="94" /></a>
-			<a href="static/photos/photos_75a.webp" class="photo-thumb" data-fancybox="gallery1">
-				<img src="static/photos/75a.webp" alt="" width="113" height="94" /></a>
+			<button type="button" class="photo-thumb" popovertarget="lightbox" data-full="static/photos/photos_05a.webp">
+				<img src="static/photos/05a.webp" alt="" width="113" height="94" /></button>
+			<button type="button" class="photo-thumb" popovertarget="lightbox" data-full="static/photos/photos_28a.webp">
+				<img src="static/photos/28a.webp" alt="" width="113" height="94" /></button>
+			<button type="button" class="photo-thumb" popovertarget="lightbox" data-full="static/photos/photos_37a.webp">
+				<img src="static/photos/37a.webp" alt="" width="113" height="94" /></button>
+			<button type="button" class="photo-thumb" popovertarget="lightbox" data-full="static/photos/photos_42a.webp">
+				<img src="static/photos/42a.webp" alt="" width="113" height="94" /></button>
+			<button type="button" class="photo-thumb" popovertarget="lightbox" data-full="static/photos/photos_50a.webp">
+				<img src="static/photos/50a.webp" alt="" width="113" height="94" /></button>
+			<button type="button" class="photo-thumb" popovertarget="lightbox" data-full="static/photos/photos_75a.webp">
+				<img src="static/photos/75a.webp" alt="" width="113" height="94" /></button>
+		</div>
+
+		<div id="lightbox" popover class="lightbox">
+			<button type="button" class="lightbox-close" popovertarget="lightbox" popovertargetaction="hide" aria-label="Close">&times;</button>
+			<button type="button" class="lightbox-prev" aria-label="Previous photo">&#10094;</button>
+			<img class="lightbox-img" src="" alt="" />
+			<button type="button" class="lightbox-next" aria-label="Next photo">&#10095;</button>
 		</div>
 		
 		<div class="what">
@@ -262,15 +270,36 @@
 		
 
 
-	<script defer src="static/libs/fancybox_5.0.36/fancybox.umd.js"></script>
 	<script defer>
 		window.addEventListener('DOMContentLoaded', function () {
-			if (window.Fancybox) {
-				Fancybox.bind("[data-fancybox]", {
-					autoStart: true,
-					toolbar: false
-				});
+			var lightbox = document.getElementById('lightbox');
+			var lightboxImg = lightbox.querySelector('.lightbox-img');
+			var thumbs = Array.from(document.querySelectorAll('.photo-thumb'));
+			var current = 0;
+
+			function show(index) {
+				current = (index + thumbs.length) % thumbs.length;
+				lightboxImg.src = thumbs[current].dataset.full;
 			}
+
+			thumbs.forEach(function (thumb, index) {
+				thumb.addEventListener('click', function () {
+					show(index);
+				});
+			});
+
+			lightbox.querySelector('.lightbox-prev').addEventListener('click', function () {
+				show(current - 1);
+			});
+			lightbox.querySelector('.lightbox-next').addEventListener('click', function () {
+				show(current + 1);
+			});
+
+			document.addEventListener('keydown', function (e) {
+				if (!lightbox.matches(':popover-open')) return;
+				if (e.key === 'ArrowLeft') show(current - 1);
+				if (e.key === 'ArrowRight') show(current + 1);
+			});
 		});
 	</script>
 
