@@ -8,7 +8,6 @@ export default defineConfig({
     open: true,
     // Preserve BrowserSync's behavior of reloading on HTML changes
     watch: {
-      usePolling: true
     }
   },
   css: {
@@ -17,7 +16,7 @@ export default defineConfig({
   build: {
     outDir: '../dist',
     emptyOutDir: true,
-    rollupOptions: {
+    rolldownOptions: {
       input: {
         main: '/index.html'
       }
