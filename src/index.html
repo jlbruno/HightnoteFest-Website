@@ -14,7 +14,7 @@
 	
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 	
-	<link rel="stylesheet" href="static/css/style.css?v=20260801" media="all" />
+	<link rel="preload" href="static/css/style.css?v=20260801" as="style" media="all" />
 	<link rel="stylesheet" href="static/libs/fancybox_5.0.36/fancybox.css" media="all" />
 	<link rel="stylesheet" href="static/css/print.css" media="print" />
 
@@ -262,12 +262,15 @@
 		
 
 
-	<script src="static/libs/fancybox_5.0.36/fancybox.umd.js"></script>
-	<script>
-
-		Fancybox.bind("[data-fancybox]", {
-			autoStart: true,
-			toolbar: false
+	<script defer src="static/libs/fancybox_5.0.36/fancybox.umd.js"></script>
+	<script defer>
+		window.addEventListener('DOMContentLoaded', function () {
+			if (window.Fancybox) {
+				Fancybox.bind("[data-fancybox]", {
+					autoStart: true,
+					toolbar: false
+				});
+			}
 		});
 	</script>
 
