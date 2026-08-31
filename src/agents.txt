@@ -1,0 +1,8 @@
+# Data use policy
+Allow-Training: no
+Allow-RAG: yes
+Allow-Actions: no
+
+# Default rules for all agents
+[Agent: *]
+Allow: /

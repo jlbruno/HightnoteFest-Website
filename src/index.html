@@ -3,24 +3,63 @@
 <html lang="en">
 <head>
 
-	<title>Highnote Annual Balloon, Music and Fireworks Festival Festival - Epping, NH</title>
+	<title>Highnote Annual Music and Fireworks Festival - Epping, NH</title>
 	<meta charset="utf-8">
 	<meta name="robots" content="all" />
 	<meta name="copyright" content="The Adam McPhee Memorial Foundation" />
 	
-	<meta name="description" content="Highnote Annual Balloon, Music and Fireworks Festival Festival in Epping, NH" />
+	<meta name="description" content="Highnote Annual Music and Fireworks Festival in Epping, NH" />
+
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Event",
+		"name": "Highnote Annual Music and Fireworks Festival",
+		"startDate": "2026-09-12T14:00:00-04:00",
+		"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+		"eventStatus": "https://schema.org/EventScheduled",
+		"description": "Highnote Annual Music and Fireworks Festival in Epping, NH, benefiting the Adam McPhee Memorial Foundation. Features live music, fireworks, a Jack Sharkey 5k race, and family activities.",
+		"image": ["https://www.highnotefest.com/static/img/themes/2026-theme.webp"],
+		"location": {
+			"@type": "Place",
+			"name": "Governor Prescott House",
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "173 Prescott Road",
+				"addressLocality": "Epping",
+				"addressRegion": "NH",
+				"postalCode": "03042",
+				"addressCountry": "US"
+			}
+		},
+		"offers": {
+			"@type": "Offer",
+			"url": "https://www.highnotefest.com/#tickets-directions",
+			"price": "15",
+			"priceCurrency": "USD",
+			"availability": "https://schema.org/InStock",
+			"validFrom": "2026-01-01"
+		},
+		"organizer": {
+			"@type": "Organization",
+			"name": "The Adam McPhee Memorial Foundation",
+			"url": "https://www.highnotefest.com/#foundation"
+		}
+	}
+	</script>
 
 	<meta name="viewport" content="width=device-width" /> 
 	
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 	
-	<link rel="stylesheet" href="static/css/style.css" media="all" />
-	<link rel="stylesheet" href="static/libs/fancybox_5.0.36/fancybox.css" media="all" />
+	
+	<link rel="preload" href="static/css/style.css?v=20260801" as="style" />
+	<link rel="stylesheet" href="static/css/style.css?v=20260801" media="all" />
 	<link rel="stylesheet" href="static/css/print.css" media="print" />
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 
 	<script>
@@ -40,27 +79,34 @@
 
 	<header class="contain">
 		<div id="logo" role="banner">
-			<img src="static/img/logo.png" width="300" alt="Highnote logo" />
+			<img src="static/img/logo.webp" width="300" height="89" alt="Highnote logo" />
 		</div>
 
 		<div class="photos">
-			<a href="static/photos/photos_05a.jpg" class="photo-thumb" data-fancybox="gallery1">
-				<img src="static/photos/05a.jpg" alt="" /></a>
-			<a href="static/photos/photos_28a.jpg" class="photo-thumb" data-fancybox="gallery1">
-				<img src="static/photos/28a.jpg" alt="" /></a>
-			<a href="static/photos/photos_37a.jpg" class="photo-thumb" data-fancybox="gallery1">
-				<img src="static/photos/37a.jpg" alt="" /></a>
-			<a href="static/photos/photos_42a.jpg" class="photo-thumb" data-fancybox="gallery1">
-				<img src="static/photos/42a.jpg" alt="" /></a>
-			<a href="static/photos/photos_50a.jpg" class="photo-thumb" data-fancybox="gallery1">
-				<img src="static/photos/50a.jpg" alt="" /></a>
-			<a href="static/photos/photos_75a.jpg" class="photo-thumb" data-fancybox="gallery1">
-				<img src="static/photos/75a.jpg" alt="" /></a>
+			<button type="button" class="photo-thumb" popovertarget="lightbox" data-full="static/photos/photos_05a.webp">
+				<img src="static/photos/05a.webp" alt="" width="113" height="94" /></button>
+			<button type="button" class="photo-thumb" popovertarget="lightbox" data-full="static/photos/photos_28a.webp">
+				<img src="static/photos/28a.webp" alt="" width="113" height="94" /></button>
+			<button type="button" class="photo-thumb" popovertarget="lightbox" data-full="static/photos/photos_37a.webp">
+				<img src="static/photos/37a.webp" alt="" width="113" height="94" /></button>
+			<button type="button" class="photo-thumb" popovertarget="lightbox" data-full="static/photos/photos_42a.webp">
+				<img src="static/photos/42a.webp" alt="" width="113" height="94" /></button>
+			<button type="button" class="photo-thumb" popovertarget="lightbox" data-full="static/photos/photos_50a.webp">
+				<img src="static/photos/50a.webp" alt="" width="113" height="94" /></button>
+			<button type="button" class="photo-thumb" popovertarget="lightbox" data-full="static/photos/photos_75a.webp">
+				<img src="static/photos/75a.webp" alt="" width="113" height="94" /></button>
+		</div>
+
+		<div id="lightbox" popover class="lightbox">
+			<button type="button" class="lightbox-close" popovertarget="lightbox" popovertargetaction="hide" aria-label="Close">&times;</button>
+			<button type="button" class="lightbox-prev" aria-label="Previous photo">&#10094;</button>
+			<img class="lightbox-img" src="" alt="" />
+			<button type="button" class="lightbox-next" aria-label="Next photo">&#10095;</button>
 		</div>
 		
 		<div class="what">
-			<h1>25th Annual Highnote Festival</h1>
-			Saturday, September 13, 2025 - <span class="nowrap">2pm&ndash;dark</span>
+			<h1>26th Annual Highnote Festival</h1>
+			Saturday, September 12, 2026 - <span class="nowrap">2pm&ndash;dark</span>
 		</div>
 
 		<nav class="nav-primary" role="navigation">
@@ -81,21 +127,21 @@
 				<p>
 					THE GOVERNOR PRESCOTT HOUSE, EPPING, NH<br>
 					The McPhee Family of Epping, NH
-	presents HIGHNOTE – the 25th Annual Music and Fireworks Festival to benefit the
-	Adam McPhee Memorial Foundation. With twenty four years in the running, the festival has attracted an average of 500 guests each year and has raised about $170,000 in donations to benefit the Adam McPhee Memorial Foundation.</p>
-	<p>On Saturday, September 13th, 2025 from 2:00pm to dark (rain or shine) at the grounds of the Governor Prescott House on the McPhee family farm, friends, family and festivalgoers will continue the tradition of the all day celebration.<br>
+	presents HIGHNOTE – the 26th Annual Music and Fireworks Festival to benefit the
+	Adam McPhee Memorial Foundation. With twenty five years in the running, the festival has attracted an average of 500 guests each year and has raised about $180,000 in donations to benefit the Adam McPhee Memorial Foundation.</p>
+	<p>On Saturday, September 12th, 2026 from 2:00pm to dark (rain or shine) at the grounds of the Governor Prescott House on the McPhee family farm, friends, family and festivalgoers will continue the tradition of the all day celebration.<br>
 	Epping Police and Fire Department will be present. <br>The grounds are handicap accessible.</p>
 	<p><small>* Due to insurance reasons we ask that you leave your pets at home. </small></p>
 				</p>
 				<p>
 					<a href="https://www.facebook.com/pages/Highnote-Festival-Adam-McPhee-Memorial-Foundation/109993429028286">
-						<img src="static/img/fb/FB_FindUsOnFacebook-114.png" alt="Find us on FB">
+						<img src="static/img/fb/FB_FindUsOnFacebook-114.png" alt="Find us on FB" width="114" height="29" />
 					</a>
 			</div>
 
 			<div class="col">
 				<div class="branding">
-					<img src="static/img/themes/2025-theme.png" alt="25 years of Highnote">
+					<img src="static/img/themes/2026-theme.webp" alt="Bluegrass &amp; Green Fields" fetchpriority="high" width="1000" height="779">
 
 					<br><br>
 				</div>
@@ -107,7 +153,7 @@
 			<h2 class="hdr-section">Jack Sharkey 5k</h2>
 
 			<div class="col">
-				<img src="static/img/5k/5k-jack-sharkey_2025.png">
+				<img src="static/img/5k/5k-jack-sharkey_2026.webp" alt="Jack Sharkey 5k" fetchpriority="high" width="1000" height="716">
 			</div>
 
 			<div class="col">
@@ -132,7 +178,7 @@
 					<dd><a href="https://www.running4free.com/event/jack-sharkey-5k-knockout-the-hills-at-highnote/">Jack Sharkey 5k Walk/Run</a><br> "Knock out the Hills at Highnote"</dd>
 
 					<dt>2:00–3:45pm</dt>
-					<dd>Live Music - <a href="https://www.facebook.com/p/Beth-The-Boys-100063625862288/">Beth &amp; the Boys</a></dd>
+					<dd>Live Bluegrass Music - <a href="https://www.northrivermusic.com/">North River Music</a></dd>
 
 					<dt>4:00–4:45pm</dt>
 					<dd>Wildlife Encounters - <a href="https://weecocenter.com/">WEECO</a></dd>
@@ -140,8 +186,8 @@
 					<dt>5:00–5:30pm</dt>
 					<dd>Live Auction</dd>
 
-					<dt>5:30–7:30pm</dt>
-					<dd>Live Music Continues - <a href="https://www.facebook.com/p/Beth-The-Boys-100063625862288/">Beth &amp; the Boys</a></dd>
+					<dt>5:30–7:00pm</dt>
+					<dd>Live Bluegrass Music - <a href="https://www.northrivermusic.com/">North River Music</a></dd>
 
 					<dt>Dark</dt>
 					<dd>Fireworks - <a href="https://www.northstarfireworks.com/">Northstar Fireworks</a></dd>
@@ -152,15 +198,17 @@
 			<div class="col">
 				<h3 class="hdr-subsection">Activities & Exhibits for Children and Adults</h3>
 				<ul>
-					<li>Climbing Wall</li>
-					<li>Axe Throwing – 603axes.com</li>
+					<li>Mechanical Bull</li>
 					<li>Golf Challenge</li>
+					<li>Inflatable Basketball Challenge</li>
+					<li>Inflatable Frisbee Challenge</li>
+					<li>Inflatable Axe Throwing</li>
 					<li>Hay Rides</li>
 					<!-- <li>Tethered Balloon Rides<sup>1</sup></li> -->
 					<li><a href="https://www.bostonhelicopters.com/">Helicopter Rides</a><sup>1</sup></li>
 					<li>Arts and crafts for kids of all ages</li>
 					<li>Local artisan exhibit booths</li>
-					<li>Horseshoe Pitching Tournament</li>
+					<li>Horseshoe Pitching Tournament – 3 PM start</li>
 					<li>Snowmobile water crossing</li>
 				</ul>
 				<p class="footnote"><small><sup>1</sup> 
@@ -228,7 +276,7 @@
 				<h3 class="hdr-subsection">Benefit Proceeds</h3>
 
 				<ul>
-					<li>Epping High School Graduating Seniors – 29 students</li>
+					<li>Epping High School Graduating Seniors – 32 students</li>
 					<li>Richie McFarland Children’s Center</li>
 					<li>UNH Therapeutic Riding, Field of Dreams and Wendall’s Wish therapeutic riding programs</li>
 					<li>Farmsteads of New England (adult disabilities program in Epping)</li>
@@ -260,12 +308,36 @@
 		
 
 
-	<script src="static/libs/fancybox_5.0.36/fancybox.umd.js"></script>
-	<script>
+	<script defer>
+		window.addEventListener('DOMContentLoaded', function () {
+			var lightbox = document.getElementById('lightbox');
+			var lightboxImg = lightbox.querySelector('.lightbox-img');
+			var thumbs = Array.from(document.querySelectorAll('.photo-thumb'));
+			var current = 0;
 
-		Fancybox.bind("[data-fancybox]", {
-			autoStart: true,
-			toolbar: false
+			function show(index) {
+				current = (index + thumbs.length) % thumbs.length;
+				lightboxImg.src = thumbs[current].dataset.full;
+			}
+
+			thumbs.forEach(function (thumb, index) {
+				thumb.addEventListener('click', function () {
+					show(index);
+				});
+			});
+
+			lightbox.querySelector('.lightbox-prev').addEventListener('click', function () {
+				show(current - 1);
+			});
+			lightbox.querySelector('.lightbox-next').addEventListener('click', function () {
+				show(current + 1);
+			});
+
+			document.addEventListener('keydown', function (e) {
+				if (!lightbox.matches(':popover-open')) return;
+				if (e.key === 'ArrowLeft') show(current - 1);
+				if (e.key === 'ArrowRight') show(current + 1);
+			});
 		});
 	</script>
 

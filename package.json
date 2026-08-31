@@ -4,17 +4,15 @@
   "author": {
     "name": "Jeff Leombruno"
   },
+	"type": "module",
   "scripts": {
-    "prestart": "npm install",
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "legacy:start": "gulp serve",
-    "legacy:build": "gulp"
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^5.2.9"
+    "vite": "8.1.5"
   },
   "dependencies": {
     "@fancyapps/ui": "^5.0.36"
